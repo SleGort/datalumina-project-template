@@ -42,7 +42,7 @@ This command creates a copy of `.env.example` and names it `.env`, allowing you 
 │
 ├── models             <- Trained and serialized models, model predictions, or model summaries
 │
-├── exploration          <- Jupyter notebooks and py files(to use with VS extensions). Naming convention is a number (for ordering),
+├── exploration        <- Jupyter notebooks and py files(to use with VS extensions). Naming convention is a number (for ordering),
 │                         the creator's initials, and a short `-` delimited description, e.g.
 │                         `1.0-jqp-initial-data-exploration`
 │
