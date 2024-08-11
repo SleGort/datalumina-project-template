@@ -36,13 +36,15 @@ This command creates a copy of `.env.example` and names it `.env`, allowing you 
 ├── README.md          <- The top-level README for developers using this project
 ├── data
 │   ├── external       <- Data from third party sources
-│   ├── interim        <- Intermediate data that has been transformed
+│   ├── interim        <- Intermediate data that has been transformed, data in this directory
+│   │                     is what would be called for any feature engineering. (separate files)
 │   ├── processed      <- The final, canonical data sets for modeling
 │   └── raw            <- The original, immutable data dump
 │
 ├── models             <- Trained and serialized models, model predictions, or model summaries
 │
-├── exploration        <- Jupyter notebooks and py files(to use with VS extensions). Naming 
+├── exploration        <- Jupyter notebooks and py files(to use with VS extensions).
+|                         May contain sub-folders. Naming 
 |                         convention is a number (for ordering),
 │                         the creator's initials, and a short `-` delimited description, e.g.
 │                         `1.0-jqp-initial-data-exploration`
