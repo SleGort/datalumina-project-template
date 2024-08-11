@@ -28,7 +28,7 @@ This command creates a copy of `.env.example` and names it `.env`, allowing you 
 │
 ├── models             <- Trained and serialized models, model predictions, or model summaries
 │
-├── exploration        <- Jupyter notebooks, py files(VS Code extension: Jupyter Interactive Window).
+├── exploration        <- Jupyter notebooks, py files(VS Code setting: Jupyter Interactive Window).
 |                         May contain sub-folders. Naming 
 |                         convention is a number (for ordering),
 │                         the creator's initials, and a short `-` delimited description, e.g.
