@@ -28,12 +28,6 @@ This command creates a copy of `.env.example` and names it `.env`, allowing you 
 │
 ├── models             <- Trained and serialized models, model predictions, or model summaries
 │
-├── exploration        <- Jupyter notebooks, py files (VS Code setting: Jupyter Interactive Window).
-│                         May contain sub-folders. Naming 
-│                         convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`
-│
 ├── references         <- Data dictionaries, manuals, and all other explanatory materials
 │
 ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
@@ -59,6 +53,7 @@ This command creates a copy of `.env.example` and names it `.env`, allowing you 
 ```
 ## Workflow
 
-Processed folder = Train data -> Split into train and validation set -> Validation set is to be used for evaluating generalizability of the models (model selection step) -> Choose the best model -> Train that model on (train set + validation set) -> Use the trained model on test_set data for the final test of the generalization performance -> Move to production?
+Naming convention is a number (for ordering), the creator's initials, and a short `-` delimited description, e.g. `1.0-jqp-initial-data-exploration`
 
+Processed folder = Train data -> Split into train and validation set -> Validation set is to be used for evaluating generalizability of the models (model selection step) -> Choose the best model -> Train that model on (train set + validation set) -> Use the trained model on test_set data for the final test of the generalization performance -> Move to production?
 --------
