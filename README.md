@@ -58,6 +58,6 @@ This command creates a copy of `.env.example` and names it `.env`, allowing you 
 ```
 ## Workflow
 
-Processed folder = Train data -> Split into train and validation set -> Validation set is to be used for evaluating generalizability of the models (model selection step) -> Once the best model is chosen use the test_set data for final test of the generalization performance -> Move to production?
+Processed folder = Train data -> Split into train and validation set -> Validation set is to be used for evaluating generalizability of the models (model selection step) -> Choose the best model -> Train that model on (train set + validation set) -> Use the trained model on test_set data for the final test of the generalization performance -> Move to production?
 
 --------
