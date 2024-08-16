@@ -13,14 +13,12 @@ copy .env.example .env # Windows Command Prompt
 
 This command creates a copy of `.env.example` and names it `.env`, allowing you to configure your environment variables specific to your setup.
 
-
 ## Project Organization
-
 ```
 ├── LICENSE            <- Open-source license if one is chosen
 ├── README.md          <- The top-level README for developers using this project
 ├── data
-│   ├── external       <- Data from third party sources
+│   ├── external       <- Data from third-party sources
 │   ├── interim        <- Intermediate data that has been transformed, data in this directory
 │   │                     is what would be called for any feature engineering. (separate files)
 │   ├── processed      <- The final, canonical data sets for modeling
@@ -28,9 +26,9 @@ This command creates a copy of `.env.example` and names it `.env`, allowing you 
 │
 ├── models             <- Trained and serialized models, model predictions, or model summaries
 │
-├── exploration        <- Jupyter notebooks, py files(VS Code setting: Jupyter Interactive Window).
-|                         May contain sub-folders. Naming 
-|                         convention is a number (for ordering),
+├── exploration        <- Jupyter notebooks, py files (VS Code setting: Jupyter Interactive Window).
+│                         May contain sub-folders. Naming 
+│                         convention is a number (for ordering),
 │                         the creator's initials, and a short `-` delimited description, e.g.
 │                         `1.0-jqp-initial-data-exploration`
 │
@@ -42,26 +40,24 @@ This command creates a copy of `.env.example` and names it `.env`, allowing you 
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
 │                         generated with `pip freeze > requirements.txt`
 │
-└── src                         <- Source code for this project
-    │
-    ├── __init__.py             <- Makes src a Python module
-    │
-    ├── config.py               <- Store useful variables and configuration
-    │
-    ├── dataset.py              <- Scripts to download or generate data
-    │
-    ├── features.py             <- Code to create features for modeling
-    │
-    │    
-    ├── modeling                
-    │   ├── __init__.py 
-    │   ├── predict.py          <- Code to run model inference with trained models          
-    │   └── train.py            <- Code to train models
-    │
-    ├── plots.py                <- Code to create visualizations 
-    │
-    └── services                <- Service classes to connect with external platforms, tools, or APIs
-        └── __init__.py 
+├── src                         <- Source code for this project
+│   ├── __init__.py             <- Makes src a Python module
+│   ├── config.py               <- Store useful variables and configuration
+│   ├── dataset.py              <- Scripts to download or generate data
+│   ├── features.py             <- Code to create features for modeling
+│   ├── modeling                
+│   │   ├── __init__.py 
+│   │   ├── predict.py          <- Code to run model inference with trained models          
+│   │   └── train.py            <- Code to train models
+│   ├── plots.py                <- Code to create visualizations 
+│   └── services                <- Service classes to connect with external platforms, tools, or APIs
+│       └── __init__.py
+│
+└── test_set           <- Final test set, kept locked until model selection is complete.
+                         Only to be used for final generalization performance testing.
 ```
+## Workflow
+
+Processed folder = Train data -> Split into train and validation set -> Validation set is to be used for evaluating generalizability of the models (model selection step) -> Once the best model is chosen use the test_set data for final test of the generalization performance -> Move to production?
 
 --------
