@@ -22,7 +22,9 @@ This command creates a copy of `.env.example` and names it `.env`, allowing you 
 │   ├── interim        <- Intermediate data that has been transformed, data in this directory
 │   │                     is what would be called for any feature engineering. (separate files)
 │   ├── processed      <- The final, canonical data sets for modeling
-│   └── raw            <- The original, immutable data dump
+│   ├── raw            <- The original, immutable data dump
+│   └── test_set       <- Final test set, kept locked until model selection is complete.
+│                         Only to be used for final generalization performance testing.
 │
 ├── models             <- Trained and serialized models, model predictions, or model summaries
 │
@@ -41,20 +43,19 @@ This command creates a copy of `.env.example` and names it `.env`, allowing you 
 │                         generated with `pip freeze > requirements.txt`
 │
 ├── src                         <- Source code for this project
-│   ├── __init__.py             <- Makes src a Python module
-│   ├── config.py               <- Store useful variables and configuration
-│   ├── dataset.py              <- Scripts to download or generate data
-│   ├── features.py             <- Code to create features for modeling
-│   ├── modeling                
-│   │   ├── __init__.py 
-│   │   ├── predict.py          <- Code to run model inference with trained models          
-│   │   └── train.py            <- Code to train models
-│   ├── plots.py                <- Code to create visualizations 
-│   └── services                <- Service classes to connect with external platforms, tools, or APIs
-│       └── __init__.py
-│
-└── test_set           <- Final test set, kept locked until model selection is complete.
-                         Only to be used for final generalization performance testing.
+   ├── __init__.py             <- Makes src a Python module
+   ├── config.py               <- Store useful variables and configuration
+   ├── dataset.py              <- Scripts to download or generate data
+   ├── features.py             <- Code to create features for modeling
+   ├── modeling                
+   │   ├── __init__.py 
+   │   ├── predict.py          <- Code to run model inference with trained models          
+   │   └── train.py            <- Code to train models
+   ├── plots.py                <- Code to create visualizations 
+   └── services                <- Service classes to connect with external platforms, tools, or APIs
+       └── __init__.py
+
+                         
 ```
 ## Workflow
 
