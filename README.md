@@ -56,4 +56,5 @@ This command creates a copy of `.env.example` and names it `.env`, allowing you 
 Naming convention is a number (for ordering), the creator's initials, and a short `-` delimited description, e.g. `1.0-jqp-initial-data-exploration`
 
 Processed folder = Train data -> Split into train and validation set -> Validation set is to be used for evaluating generalizability of the models (model selection step) -> Choose the best model -> Train that model on (train set + validation set) -> Use the trained model on test_set data for the final test of the generalization performance -> Move to production?
+
 --------
