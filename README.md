@@ -23,7 +23,7 @@ import os
 
 sys.path.append(os.path.dirname(os.getcwd()))
 ```
-This code snippet assumes that the folder is directly below the parent folder. If you have nested subfolders you might want to call `os.path.dirname()` a couple of times
+This code snippet assumes that the folder is directly below the parent folder. If you have nested subfolders you might want to call `os.path.dirname()` a couple of times.
 ## Project Organization
 ```
 ├── LICENSE            <- Open-source license if one is chosen
