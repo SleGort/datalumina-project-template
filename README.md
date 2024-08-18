@@ -23,7 +23,17 @@ import os
 
 sys.path.append(os.path.dirname(os.getcwd()))
 ```
-This code snippet assumes that the folder is directly below the parent folder. If you have nested subfolders you might want to call `os.path.dirname()` a couple of times.
+or alternatively:
+
+```python
+from pathlib import Path
+
+# Get the root directory of the project
+project_root = Path(__file__).parent.parent.absolute()
+```
+
+These code snippets assumes that the folder is directly below the parent folder. If you have nested subfolders you might want to call `os.path.dirname()` a couple of times.
+
 ## Project Organization
 ```
 ├── LICENSE            <- Open-source license if one is chosen
