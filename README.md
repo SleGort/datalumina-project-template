@@ -32,7 +32,7 @@ from pathlib import Path
 project_root = Path(__file__).parent.parent.absolute()
 ```
 
-These code snippets assumes that the folder is directly below the parent folder. If you have nested subfolders you might want to call `os.path.dirname()` a couple of times.
+These code snippets assumes that the folder is directly below the parent folder. If you have nested subfolders you might want to call `os.path.dirname()` or `.parent` a couple of times.
 
 ## Project Organization
 ```
