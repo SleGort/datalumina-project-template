@@ -13,15 +13,17 @@ copy .env.example .env # Windows Command Prompt
 
 This command creates a copy of `.env.example` and names it `.env`, allowing you to configure your environment variables specific to your setup.
 
-## Adding root folder to Python module search path
-If you are stuck with module import issues in the notebook or python file use the following code to append the parent directory folder. (Assuming that your subfolder is directly below the parent folder)
-This code will add the root folder to the list of paths to look for when importing a module.
+## Adding Root Folder to Python's Module Search Path
+
+If you're having trouble importing modules in a notebook or script, use this code to add the parent directory to the module search path:
+
 ```python
 import sys
 import os
 
 sys.path.append(os.path.dirname(os.getcwd()))
 ```
+This code snippet assumes that the folder is directly below the parent folder. If you have nested subfolders you might want to call `os.path.dirname()` a couple of times
 ## Project Organization
 ```
 ├── LICENSE            <- Open-source license if one is chosen
