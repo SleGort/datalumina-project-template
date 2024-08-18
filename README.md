@@ -64,8 +64,21 @@ This code snippet assumes that the folder is directly below the parent folder. I
 ```
 ## Workflow
 
-Naming convention is a number (for ordering), the creator's initials, and a short `-` delimited description, e.g. `1.0-jqp-initial-data-exploration`
+### Naming Convention
+Files should be named using the following convention: `number-initials-description`, where:
+- `number` is for ordering,
+- `initials` are the creator's initials,
+- `description` is a short, hyphen-separated summary.
 
-Processed folder = Train data -> Split into train and validation set -> Validation set is to be used for evaluating generalizability of the models (model selection step) -> Choose the best model -> Train that model on (train set + validation set) -> Use the trained model on test_set data for the final test of the generalization performance -> Move to production?
+**Example**: `1.0-jqp-initial-data-exploration`
+
+### Processed Data Workflow
+1. **Training Data**: Start with the full training dataset.
+2. **Split**: Divide the data into a training set and a validation set.
+3. **Validation**: Use the validation set to evaluate model generalizability during the model selection step.
+4. **Model Selection**: Choose the best-performing model based on validation performance.
+5. **Final Training**: Retrain the selected model using both the training and validation sets.
+6. **Testing**: Apply the final model to the test set to evaluate its generalization performance.
+7. **Production**: If the model performs well on the test set, consider moving it to production.
 
 --------
