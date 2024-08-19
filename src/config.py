@@ -15,3 +15,6 @@ PATH_SERVICES = project_root / "src" / "services"
 
 PATH_FIGURES = project_root / "reports" / "figures"
 PATH_MODELS = project_root / "models"
+
+RANDOM_SEED = 42
+TEST_SIZE = 0.2
